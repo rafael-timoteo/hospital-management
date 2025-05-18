@@ -1,4 +1,4 @@
-import queriesEP2, queriesMenu, popular_banco
+import queries, queriesMenu, popular_banco
 import mysql.connector
 
 def connect_to_database():
@@ -21,8 +21,8 @@ def connect_to_database():
 
 def criar_tabelas(conn):
     try:
-        queriesEP2.create_tables(conn)
-        queriesEP2.populate_db(conn)
+        queries.create_tables(conn)
+        queries.populate_db(conn)
         print("Database created and populated successfully!")
     except Exception as e:
         print(f"Error creating tables or populating database: {e}")
